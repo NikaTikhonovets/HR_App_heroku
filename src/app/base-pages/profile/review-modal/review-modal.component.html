@@ -1,0 +1,31 @@
+<div class="modal-content modal-review">
+
+  <div class="modal-header">
+    <button type="button" class="close" (click)="refModal.hide()">&times;</button>
+    <h4 class="modal-title profile-fullName">{{user.name}} {{user.lastName}}</h4>
+  </div>
+
+  <div class="modal-body">
+
+    <div class="information">
+      <span class="information-label">Position: </span>
+      <div *ngFor="let vacancy of user.vacancies">
+        <span class="position-profile">{{vacancy}}</span>
+      </div>
+    </div>
+
+    <tabset>
+      <tab heading="Add review" id="tab1">
+        <textarea #content [(ngModel)]="review" class="review-text" placeholder="Write..."></textarea>
+        <button type="button" class="review-button" (click)="addReview(review)">Send</button>
+      </tab>
+      <tab *ngFor="let review of reviews" heading={{review.last_name}}>
+        <div class="review-content">
+          {{review.content}}
+        </div>
+        <div class="review-date">{{review.date | date: 'dd MMM yyyy'}}</div>
+      </tab>
+    </tabset>
+
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="modal-content modal-experience">
+
+  <div class="modal-header">
+    <button type="button" class="close" (click)="refModal.hide()">&times;</button>
+    <h4 class="modal-title">Add experience</h4>
+  </div>
+
+  <div class="modal-body">
+    <form #experienceForm="ngForm">
+      <label>*Period</label>
+      <div class="exp-period">
+        <dp-date-picker [(ngModel)]="experience.start" [config]="datePickerConfig" theme="dp-material"
+                        mode="month" [ngModelOptions]="{standalone: true}" #start="ngModel" required placeholder="Form"></dp-date-picker>
+        <div [hidden]="start.valid || start.untouched" class="alert-danger">
+          Period is required
+        </div>
+        <span> - </span>
+        <dp-date-picker [(ngModel)]="experience.end" [config]="datePickerConfig" theme="dp-material"
+                        mode="month" [ngModelOptions]="{standalone: true}" #end="ngModel" required placeholder="Till"></dp-date-picker>
+        <div [hidden]="end.valid || end.untouched" class="alert-danger">
+          Period is required
+        </div>
+      </div>
+      <div [hidden]="experience.end >= experience.start" class="alert-danger">
+        Invalid period
+      </div>
+
+      <label>
+        Position:
+        <input type="text" name="position" class="exp-position form-control" [(ngModel)]="experience.position">
+      </label>
+
+      <label>
+        Location:
+        <input type="text" name="location" class="exp-location form-control" [(ngModel)]="experience.location">
+      </label>
+
+      <label>
+        *Company:
+        <input type="text" class="exp-company form-control" [(ngModel)]="experience.company" required name="company"
+               #company="ngModel">
+        <div [hidden]="company.valid || company.pristine" class="alert-danger">
+          Company is required
+        </div>
+      </label>
+
+      <label>
+        Description:
+        <input type="text" name="description" class="exp-description form-control" [(ngModel)]="experience.description">
+      </label>
+    </form>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="profile-button" (click)="addExperience(experience); refModal.hide()"
+            [disabled]="start.invalid || end.invalid || company.invalid || experience.end < experience.start">
+      Save
+    </button>
+    <button type="button" class="profile-button" (click)="refModal.hide()">Close</button>
+  </div>
+
+</div>

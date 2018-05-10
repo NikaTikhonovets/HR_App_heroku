@@ -1,0 +1,256 @@
+.page-profile {
+  min-height: calc(100vh - 40px);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.breadcrumbs span {
+  margin: 0 10px;
+}
+
+.page-profile-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c0c0c0;
+  height: 30px;
+}
+
+.page-profile-header p {
+  padding: 8px 0 0 30px;
+}
+
+.page-profile-header a {
+  color: #3f3f3f;
+}
+
+.page-profile-header .profile-button {
+  height: 25px;
+}
+
+.profile-table-left-part {
+  padding: 0;
+}
+
+.profile-table-right-part {
+  border-left: 1px solid #c0c0c0;
+  min-height: calc(100vh - 70px);
+  padding: 0;
+}
+
+.candidates-information input {
+  width: 100%;
+  height: 22px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+}
+
+.candidates-information input {
+  width: 100%;
+  height: 22px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+}
+
+.name-developer .dropdown {
+  display: none;
+}
+
+.name-developer .dropdown-arrow {
+  width: 20px;
+  height: 14px;
+  background: url(../../../../assets/images/sprite.png) 0 -5px;
+}
+
+.name-developer .dropdown-button {
+  color: black;
+  font-size: 13px;
+  width: 100%;
+  background: white;
+}
+
+.name-developer .dropdown-content {
+  width: 100%;
+}
+
+.name-developer .dropdown-button:hover {
+  background: #c0c0c0;
+}
+
+.status {
+  height: 20px;
+}
+
+.name-developer img {
+  height: 180px;
+  width: 200px;
+  margin: 10px auto;
+}
+
+.name-developer {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #c0c0c0;
+  height: 55%;
+  padding: 20px 20px 20px 20px;
+}
+
+.name-developer .position {
+  font-size: 14px;
+}
+
+.name-developer .name, .last-name {
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+.name-developer .salary {
+  font-size: 22px;
+}
+
+.contact-developer {
+  display: flex;
+  flex-direction: column;
+  height: 45%;
+  padding: 15px 20px 20px 20px;
+}
+
+.contact-developer .title-info {
+  font-size: 18px;
+}
+
+.contact-developer .number-title {
+  font-size: 14px;
+}
+
+.contact-developer .number-info, .email, .address {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.experience-developer {
+  min-height: 70vh;
+  padding: 10px 20px;
+}
+
+.skill-developer {
+  padding: 15px 0 0 15px;
+  border-top: 1px solid #c0c0c0;
+  min-height: 25%;
+}
+
+.skill-developer .title-name-skill {
+  font-size: 20px;
+}
+
+.title-name-experience {
+  font-size: 20px;
+}
+
+.profile-button, .review-button {
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #dcdcdc;
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  margin: 0 20px;
+  height: 30px;
+}
+
+.profile-button:hover, .review-button:hover {
+  background: #c0c0c0;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.button-edit {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: none;
+  color: #636466;
+  background: #e8e8e8;
+  box-shadow: 0 5px 8px #dcdcdc;
+  font-size: 20px;
+}
+
+input.ng-valid[required], input.ng-valid.required {
+  border-left: 4px solid #42A948;
+}
+
+input.ng-invalid[required] {
+  border-left: 4px solid #a94442;
+}
+
+.alert-danger {
+  background: none;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 992px) {
+  .profile-table-left-part {
+    height: auto;
+  }
+
+  .profile-table-right-part {
+    height: auto;
+  }
+
+  .page-profile-table {
+    height: auto;
+  }
+
+  .page-profile-header {
+    height: 30px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile-table-right-part {
+    border-left: none;
+  }
+
+  .name-developer .dropdown-content, .name-developer .dropdown-button {
+    width: 200px;
+  }
+
+  .contact-developer {
+    border-bottom: 1px solid #c0c0c0;
+  }
+
+  .experience-developer {
+    min-height: 100px;
+  }
+
+  .skill-developer {
+    min-height: 100px;
+  }
+}

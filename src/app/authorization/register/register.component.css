@@ -1,0 +1,22 @@
+.form-register {
+  margin: auto;
+  width: 300px;
+}
+
+.form-register a {
+  display: block;
+  color: #636466;
+  font-style: italic;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-register a:hover {
+  color: #3f3f3f;
+  text-decoration: underline;
+}
+
+.login-link {
+  margin-bottom: 10px;
+}

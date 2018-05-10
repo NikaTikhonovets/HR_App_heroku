@@ -1,0 +1,48 @@
+.page-interview {
+  min-height: calc(100vh - 50px);
+}
+
+.page-interview-header h1 {
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 30px 20px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  :host ::ng-deep .fc-today-button {
+    display: none;
+  }
+
+  :host ::ng-deep .fc-toolbar button {
+    position: relative;
+    width: min-content;
+  }
+
+  :host ::ng-deep .fc-toolbar .fc-right {
+    float: left;
+  }
+
+  :host ::ng-deep .fc-toolbar .fc-left {
+    margin-right: 2%;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 350px) {
+  :host ::ng-deep .fc-today-button {
+    display: none;
+  }
+
+  :host ::ng-deep .fc-toolbar button {
+    width: fit-content;
+  }
+
+  :host ::ng-deep .fc-toolbar .fc-right {
+    float: left;
+    margin-left: 2%;
+  }
+
+  :host ::ng-deep .fc-toolbar .fc-left {
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
+}
